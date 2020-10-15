@@ -13,6 +13,11 @@ h1 {
   color: #fefefe;
 }
 
+h2 {
+  font-family: "Overpass Mono", monospace;
+  color: #fefefe;
+}
+
 p {
   font-family: "Overpass Mono", monospace;
   color: #d9d8de;
@@ -32,28 +37,49 @@ body {
   background-color: #38373e;
 }
 
+main {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+/* Sections */
+
+#intro {
+  padding-bottom: 4%;
+}
+
+#bio {
+  padding-bottom: 4%;
+}
+
 /* Border and Rectangle */
 
 .border-white {
   border-style: solid;
-  border-width: 5px;
-  border-color: #fefefe;
+  border-width: 3px;
+  border-color: #fff;
 }
 
 .rect-parent {
   position: relative;
-  top: 0;
-  left: 0;
 }
 
 .rect {
+  z-index: 2;
+  position: absolute;
+  top: 20px;
+  left: 40px;
+  border: 3px solid #ce3c4d;
+}
+
+.rect-inverted {
   position: relative;
   top: -35px;
-  left: -50px;
+  left: 35px;
 }
 
 .rect-top {
+  z-index: 3;
   position: absolute;
   top: 0px;
-  left: 0px;
 }

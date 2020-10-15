@@ -17,15 +17,17 @@
     <main>
         <!-- intro -->
         <div class="uk-block" id="intro">
-            <div class="uk-container uk-container-small" style="padding-top: 15%">
+            <div class="uk-container uk-container-small" style="padding-top: 16%">
                 <div class="uk-grid-small uk-child-width-expand@s" uk-grid>
-                    <div class="rect-parent">
-                        <img class="rect" alt="rect" data-src="assets/img/rectangle.png" width="350px" data-height
-                            uk-img>
-                        <img class="rect-top border-white" alt="picture of me" data-src="assets/img/me.jpg"
-                            width="350px" data-height uk-img>
+                    <div style="position: relative; height: 500px">
+                        <div class="rect-parent" style="padding-bottom: 15%; height: 500px">
+                            <div class="rect uk-responsive-height uk-responsive-width"
+                                style="width: 340px; height: 490px"></div>
+                            <img class="rect-top border-white" alt="picture of me" data-src="assets/img/me.jpg"
+                                width="350px" data-height uk-img>
+                        </div>
                     </div>
-                    <div>
+                    <div style="padding-top: 3%; padding-left: 5%;">
                         <h1>Hi! I'm<br>
                             <strong>Justin Zhao</strong>.
                         </h1>
@@ -51,15 +53,33 @@
                 </div>
             </div>
         </div>
-        <!-- intro -->
+        <!-- bio -->
         <div class="uk-block" id="bio">
             <div class="uk-container uk-container-small" style="padding-top: 10%">
                 <div class="uk-child-width-1-1 uk-text-center" uk-grid>
+                    <div class="uk-text-left">
+                        <h2>more about me:</h2>
+                        <div style="height: 25px"></div>
+                    </div>
+                    <div class="uk-child-width-1-2 uk-text-left" uk-grid>
+                        <div style="padding-right: 5%; padding-top: 4%">
+                            <p>
+                                I love taking photos, coding programs, and discovering new food places.
+                            </p>
+                            <p>
+                                I'm from Southern California, but I am now based in NYC pursuing my studies!
+                            </p>
+                        </div>
+                        <div>
+                            <div class="rect-parent">
+                                <img class="rect-inverted" alt="rect" data-src="assets/img/rectangle-horizontal.png"
+                                    width="410px" data-height uk-img>
+                                <img class="rect-top border-white" alt="picture of me with skewer"
+                                    data-src="assets/img/kageskewer.jpg" width="410px" data-height uk-img>
+                            </div>
+                        </div>
+                    </div>
                     <div style="padding-left: 5%; padding-right: 5%">
-                        <p>
-                            In my free time, I like to take photos, code/develop programs, and discover new food places
-                            around me.
-                        </p>
                     </div>
                     <div class="uk-child-width-expand@s uk-text-center" uk-grid>
                         <div></div>
@@ -68,6 +88,7 @@
                     </div>
                 </div>
             </div>
+        </div>
     </main>
 </body>
 
