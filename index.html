@@ -11,23 +11,42 @@
     <!-- uikit -->
     <script src="assets/js/uikit.min.js"></script>
     <script src="assets/js/uikit-icons.min.js"></script>
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/765af4ed9a.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body id="index-page">
     <main>
+        <!-- nav -->
+        <div class="uk-block" id="navigation">
+            <nav class="uk-navbar-container uk-margin uk-navbar-transparent" uk-navbar="mode: click">
+                <div class="uk-navbar-center ">
+                    <ul class="uk-navbar-nav">
+                        <li class="uk-active"><a class="nav-link nav-link-ltr" href="./index.html"><i
+                                    class="fas fa-user"></i>
+                                bio</a></li>
+                        <li><a class="nav-link nav-link-ltr" href="./pages/photography.html">photography</a></li>
+                        <li><a class="nav-link nav-link-ltr" href="./pages/projects.html">projects</a>
+                        </li>
+                        <li><a class="nav-link nav-link-ltr" href="./pages/eats.html">eats</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
         <!-- intro -->
         <div class="uk-block" id="intro">
-            <div class="uk-container uk-container-small" style="padding-top: 16%">
+            <div class="uk-container uk-container-small">
                 <div class="uk-grid-small uk-child-width-expand@s" uk-grid>
-                    <div style="position: relative; height: 500px">
+                    <div class="bio-picture" style="position: relative; height: 500px">
                         <div class="rect-parent" style="padding-bottom: 15%; height: 500px">
                             <div class="rect uk-responsive-height uk-responsive-width"
                                 style="width: 340px; height: 490px"></div>
-                            <img class="rect-top border-white" alt="picture of me" data-src="assets/img/me.jpg"
-                                width="350px" data-height uk-img>
+                            <img class="rect-top border-white hover-border" alt="picture of me"
+                                data-src="assets/img/me.jpg" width="350px" data-height uk-img>
                         </div>
                     </div>
-                    <div style="padding-top: 3%; padding-left: 5%;">
+                    <div class="bio-description">
                         <h1>Hi! I'm<br>
                             <strong>Justin Zhao</strong>.
                         </h1>
@@ -53,16 +72,56 @@
                 </div>
             </div>
         </div>
+        <!-- quick links -->
+        <div class="uk-block" id="quick-links">
+            <div class="uk-container uk-container-small">
+                <div class="uk-child-width-1-1 uk-text-center" uk-grid>
+                    <div class="uk-text-left">
+                        <h2>quick links:</h2>
+                        <div style="height: 25px"></div>
+                    </div>
+                    <div class="uk-grid-large uk-child-width-expand@s uk-text-center" uk-grid>
+                        <div>
+                            <div class="svg-wrapper">
+                                <svg height="100" width="225">
+                                    <rect class="shape" height="100" width="225" />
+                                    <i class="fas fa-camera text"></i>
+                                    <div class="text">Photography</div>
+                                </svg>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="svg-wrapper">
+                                <svg height="100" width="225">
+                                    <rect class="shape" height="100" width="225" />
+                                    <i class="fas fa-laptop-code text"></i>
+                                    <div class="text">Projects</div>
+                                </svg>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="svg-wrapper">
+                                <svg height="100" width="225">
+                                    <rect class="shape" height="100" width="225" />
+                                    <i class="fas fa-carrot text"></i>
+                                    <div class="text">Eats</div>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- bio -->
         <div class="uk-block" id="bio">
-            <div class="uk-container uk-container-small" style="padding-top: 10%">
+            <div class="uk-container uk-container-small">
                 <div class="uk-child-width-1-1 uk-text-center" uk-grid>
                     <div class="uk-text-left">
                         <h2>more about me:</h2>
                         <div style="height: 25px"></div>
                     </div>
-                    <div class="uk-child-width-1-2 uk-text-left" uk-grid>
-                        <div style="padding-right: 5%; padding-top: 4%">
+                    <div class="uk-grid-small uk-child-width-expand@s uk-text-left" uk-grid>
+                        <div class="bio-more-description">
                             <p>
                                 I love taking photos, coding programs, and discovering new food places.
                             </p>
@@ -70,28 +129,23 @@
                                 I'm from Southern California, but I am now based in NYC pursuing my studies!
                             </p>
                         </div>
-                        <div>
-                            <div class="rect-parent">
-                                <img class="rect-inverted" alt="rect" data-src="assets/img/rectangle-horizontal.png"
-                                    width="410px" data-height uk-img>
-                                <img class="rect-top border-white" alt="picture of me with skewer"
-                                    data-src="assets/img/kageskewer.jpg" width="410px" data-height uk-img>
+                        <div class="bio-more-picture">
+                            <div class="rect-parent" style="height: 500px">
+                                <div class="rect uk-responsive-height uk-responsive-width"
+                                    style="width: 340px; height: 240px"></div>
+                                <img class="rect-top border-white hover-border" alt="picture of me"
+                                    data-src="assets/img/kageskewer.jpg" width="350px" data-height uk-img>
                             </div>
                         </div>
-                    </div>
-                    <div style="padding-left: 5%; padding-right: 5%">
-                    </div>
-                    <div class="uk-child-width-expand@s uk-text-center" uk-grid>
-                        <div></div>
-                        <div></div>
-                        <div></div>
                     </div>
                 </div>
             </div>
         </div>
+        <!-- 
+        <a href="https://www.freepik.com/vectors/background">Background vector created by freepik - www.freepik.com</a>
+        -->
     </main>
 </body>
-
 
 <!-- scripts -->
 <script src="assets/js/main.js"></script>

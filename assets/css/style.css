@@ -1,11 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@400;700&display=swap");
 
 /*
+Dark Background------
 Gray Background: #38373e
 Light Gray Words: #fefefe
 Darker Gray Words: #d9d8de
 Red Accent: #ce3c4d
 Muted: #7b797b
+
+Light Background------
+Dark Words: #2d2c31
 */
 
 h1 {
@@ -14,6 +18,11 @@ h1 {
 }
 
 h2 {
+  font-family: "Overpass Mono", monospace;
+  color: #fefefe;
+}
+
+h3 {
   font-family: "Overpass Mono", monospace;
   color: #fefefe;
 }
@@ -42,14 +51,108 @@ main {
   padding-right: 5%;
 }
 
+/* Navbar */
+
+.uk-active a {
+  color: #ce3c4d !important;
+  font-weight: 700;
+}
+
+.nav-link {
+  color: #fefefe !important;
+}
+
+.uk-navbar-nav li {
+  font-family: "Overpass Mono", monospace !important;
+  letter-spacing: 0.05em;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 1em;
+}
+
+.nav-link:hover {
+  color: #ce3c4d !important;
+  transition: 0.2s;
+}
+
+.uk-navbar-nav i {
+  padding: 10px;
+}
+
+.nav-link::before {
+  transition: 300ms;
+  height: 3px;
+  content: "";
+  position: absolute;
+  background-color: #ce3c4d;
+}
+
+.nav-link-ltr::before {
+  width: 0;
+  bottom: 20px;
+}
+
+.nav-link-ltr:hover::before {
+  width: 15px;
+}
+
 /* Sections */
 
+.uk-block {
+  padding-bottom: 10%;
+}
+
+#navigation {
+  padding-top: 5%;
+}
+
 #intro {
-  padding-bottom: 4%;
+  padding-top: 0%;
 }
 
 #bio {
-  padding-bottom: 4%;
+}
+
+#quick-links {
+  padding-top: 3%;
+}
+
+/* Blocks */
+
+.bio-description {
+  padding-top: 3%;
+  padding-left: 10%;
+}
+
+.bio-picture {
+  position: relative;
+  height: 500px;
+}
+
+.bio-more-description {
+  padding-right: 5%;
+  padding-top: 4%;
+}
+
+.bio-more-picture {
+  position: relative;
+  height: 400px;
+  padding-left: 10%;
+}
+
+@media only screen and (max-width: 600px) {
+  .bio-description {
+    padding-top: 10%;
+  }
+  .bio-picture {
+    padding-left: 10%;
+  }
+  .bio-more-description {
+    padding-bottom: 10%;
+  }
+  .bio-more-picture {
+    padding-left: 4%;
+  }
 }
 
 /* Border and Rectangle */
@@ -73,13 +176,133 @@ main {
 }
 
 .rect-inverted {
-  position: relative;
-  top: -35px;
-  left: 35px;
+  z-index: 2;
+  position: absolute;
+  top: 20px;
+  left: 40px;
+  border: 3px solid #ce3c4d;
 }
 
 .rect-top {
   z-index: 3;
   position: absolute;
   top: 0px;
+}
+
+/* Hover */
+
+.svg-wrapper {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0 auto;
+  width: 225px;
+  cursor: pointer;
+}
+
+.shape {
+  stroke-dasharray: 140 540;
+  stroke-dashoffset: -474;
+  stroke-width: 4px;
+  fill: transparent;
+  stroke: #ce3c4d;
+  border-bottom: 5px solid black;
+  transition: stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s;
+}
+
+.text {
+  font-family: "Overpass Mono", monospace;
+  font-weight: 700;
+  line-height: 40px;
+  font-size: 20px;
+  letter-spacing: 2px;
+  color: #fefefe;
+  top: -80px;
+  position: relative;
+}
+
+.svg-wrapper:hover .shape {
+  stroke-width: 4px;
+  stroke-dashoffset: 0;
+  stroke-dasharray: 760;
+}
+
+/* Hover */
+
+.hover-border {
+  transition: 0.5s ease;
+}
+
+.hover-border:hover {
+  box-shadow: 5px 5px #ce3c4d;
+  transition: 0.5s ease;
+}
+
+/* Photography Page */
+#photography-page h1 {
+  color: #2d2c31;
+}
+
+#photography-page h2 {
+  color: #2d2c31;
+}
+
+#photography-page h3 {
+  color: #2d2c31;
+}
+
+#photography-page p {
+  color: #2d2c31;
+  font-size: 20px;
+}
+
+#photography-page a {
+  color: #2d2c31;
+}
+
+#photography-page a:hover {
+  color: #ce3c4d;
+  text-decoration: none;
+}
+
+#photography-page {
+  background-color: #fefefe;
+}
+
+#photography-page main {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+#photography-page .uk-heading-line {
+  padding-bottom: 5%;
+}
+
+@media only screen and (max-width: 600px) {
+  #photography-page .bio-description {
+    padding-top: 20%;
+  }
+  .bio-picture {
+    padding-left: 10%;
+  }
+  .bio-more-description {
+    padding-bottom: 10%;
+  }
+  .bio-more-picture {
+    padding-left: 4%;
+  }
+}
+
+/* Photography Page Navbar */
+
+#photography-page .nav-link {
+  color: #2d2c31 !important;
+}
+
+#photography-page .nav-link:hover {
+  color: #ce3c4d !important;
+}
+
+#photography-page .uk-active a {
+  color: #ce3c4d !important;
 }
